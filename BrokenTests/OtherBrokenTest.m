@@ -8,6 +8,9 @@
 
 #import <XCTest/XCTest.h>
 
+//BROKEN : Step 3 include the tests swift header. Its now broken becuase of the import of the main module
+#import "BrokenTests-Swift.h"
+
 @interface OtherBrokenTest : XCTestCase
 
 @end

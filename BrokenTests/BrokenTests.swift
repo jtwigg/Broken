@@ -9,6 +9,11 @@
 import XCTest
 @testable import Broken
 
+//BROKEN : Step 2 extend the class from the main module inside a swift file in the Tests module
+extension BreaksThings {
+    
+}
+
 class BrokenTests: XCTestCase {
     
     override func setUp() {

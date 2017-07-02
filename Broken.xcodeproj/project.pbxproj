@@ -13,6 +13,7 @@
 		86B9F7711F08A57C0052D871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F7701F08A57C0052D871 /* Assets.xcassets */; };
 		86B9F7741F08A57C0052D871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B9F7721F08A57C0052D871 /* LaunchScreen.storyboard */; };
 		86B9F77F1F08A57C0052D871 /* BrokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F77E1F08A57C0052D871 /* BrokenTests.swift */; };
+		86B9F78B1F08A5E70052D871 /* OtherBrokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9F78A1F08A5E70052D871 /* OtherBrokenTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		86B9F77A1F08A57C0052D871 /* BrokenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrokenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B9F77E1F08A57C0052D871 /* BrokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokenTests.swift; sourceTree = "<group>"; };
 		86B9F7801F08A57C0052D871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86B9F7891F08A5E70052D871 /* BrokenTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BrokenTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		86B9F78A1F08A5E70052D871 /* OtherBrokenTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherBrokenTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 			children = (
 				86B9F77E1F08A57C0052D871 /* BrokenTests.swift */,
 				86B9F7801F08A57C0052D871 /* Info.plist */,
+				86B9F78A1F08A5E70052D871 /* OtherBrokenTest.m */,
+				86B9F7891F08A5E70052D871 /* BrokenTests-Bridging-Header.h */,
 			);
 			path = BrokenTests;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 					};
 					86B9F7791F08A57C0052D871 = {
 						CreatedOnToolsVersion = 8.3.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 86B9F7651F08A57C0052D871;
 					};
@@ -209,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86B9F77F1F08A57C0052D871 /* BrokenTests.swift in Sources */,
+				86B9F78B1F08A5E70052D871 /* OtherBrokenTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,10 +371,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BrokenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BrokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BrokenTests/BrokenTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Broken.app/Broken";
 			};
@@ -378,10 +388,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BrokenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BrokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BrokenTests/BrokenTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Broken.app/Broken";
 			};
