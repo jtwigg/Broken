@@ -23,3 +23,21 @@ extension BreaksThings {
 ```
 #import "BrokenTests-Swift.h"
 ```
+
+### Breakage
+
+```
+#if defined(__has_feature) && __has_feature(modules)
+@import Broken; // <<<<<< BROKEN LINE
+@import XCTest;
+@import ObjectiveC;
+#endif
+```
+
+
+```
+Parse Issue Group
+/BrokenTests-Swift.h:135:9: Module 'Broken' not found
+included in /Broken/BrokenTests/OtherBrokenTest.m:12:9: 
+In file included from /Broken/BrokenTests/OtherBrokenTest.m:12:
+```
