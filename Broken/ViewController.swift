@@ -8,12 +8,6 @@
 
 import UIKit
 
-//BROKEN : Step 1 include ObjC class in Swift in main app module
-@objc
-class BreaksThings: NSObject {
-    
-}
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

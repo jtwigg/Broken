@@ -8,6 +8,12 @@
 
 import UIKit
 
+//BROKEN : Step 1 create ObjC class in Swift in main app module
+@objc
+class BreaksThings: NSObject {
+
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
